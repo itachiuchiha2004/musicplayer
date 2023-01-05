@@ -175,7 +175,7 @@ class musixplayer:
         global play_list
         play_list = Listbox(window,height=31,width=69,bg='gray69')
         play_list.place(x=749,y=2)
-        play_list.bind("<Double-1>",self.play_method())
+        play_list.bind("<Double-1>")
         for names in default_music_folder:
             i = 1
             play_list.insert(i,names[6:][:-4])
