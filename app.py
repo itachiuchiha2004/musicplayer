@@ -175,13 +175,17 @@ class musixplayer:
         global play_list
         play_list = Listbox(window,height=31,width=69,bg='gray69')
         play_list.place(x=749,y=2)
+        play_list.bind("<Double-1>",self.play_method())
         for names in default_music_folder:
             i = 1
             play_list.insert(i,names[6:][:-4])
             i += 1  
         
+
+
         #window.protocol("WM_DELETE_WINDOW", .exit)
         window.mainloop()
         
+
 if __name__ == '__main__':
     app = musixplayer()
